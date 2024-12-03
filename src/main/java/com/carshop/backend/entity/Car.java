@@ -48,6 +48,10 @@ public class Car {
     private Status status;
 
 
+    public void setCarId(Long carId) {
+        this.carId = carId;
+    }
+
 
 
 }

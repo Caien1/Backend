@@ -1,9 +1,6 @@
 package com.carshop.backend.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
@@ -11,8 +8,12 @@ import java.time.LocalDateTime;
 public class Meeting {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long meetingId;
 
+    public void setMeetingId(Long meetingId) {
+        this.meetingId = meetingId;
+    }
 
     //buyer id foreign key
     private Long buyerId;
